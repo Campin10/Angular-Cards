@@ -1,0 +1,14 @@
+<div class="postItem">
+  <div class="card">
+    <img class="card-img-top img embed-responsive" src="{{photoUrl}}" alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text">{{description}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item" *ngFor="let item of items.split(',')">{{item}}</li>
+    </ul>
+    <div class="card-body">
+      <a href="#" [routerLink]="['../edit-post/',id]" class="btn btn-primary">View</a>
+    </div>
+  </div>
+</div>
