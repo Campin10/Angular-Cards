@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router'
 
 @Component({
   selector: 'app-edit-post',
@@ -8,7 +7,7 @@ import { ActivatedRoute } from '@angular/router'
 })
 export class EditPostComponent implements OnInit {
   
-  constructor(private _route: ActivatedRoute) { 
+  constructor() { 
    }
 
   ngOnInit() {
