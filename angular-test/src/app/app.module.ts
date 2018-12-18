@@ -8,6 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { MainComponent } from './main/main.component';
 import { EditPostComponent } from './edit-post/edit-post.component';
+import { ViewComponent } from './view/view.component';
 
 const appRoutes: Routes = [
   {
@@ -21,9 +22,14 @@ const appRoutes: Routes = [
     data: { title: 'Post' }
   },
   {
-    path: 'edit-post/:id',
+    path: 'edit-post',
     component: EditPostComponent,
     data: { title: 'edit-post' }
+  },
+  {
+    path: 'view/:id',
+    component: ViewComponent,
+    data: { title: 'View' }
   },
   { path: '',   redirectTo: '/main', pathMatch: 'full' }
 ];
@@ -35,6 +41,7 @@ const appRoutes: Routes = [
     PostComponent,
     MainComponent,
     EditPostComponent,
+    ViewComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

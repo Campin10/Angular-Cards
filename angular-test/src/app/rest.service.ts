@@ -26,6 +26,10 @@ export class RestService {
     return this.http.get(endpoint + 'posts').pipe(
         map(this.extractData));
   }
+  getPostItem(id): Observable<any> {
+    return this.http.get(endpoint + 'posts/'+ id).pipe(
+        map(this.extractData));
+  }
   
   private handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {

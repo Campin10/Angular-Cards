@@ -9,7 +9,6 @@ import { ActivatedRoute } from '@angular/router'
 export class EditPostComponent implements OnInit {
   
   constructor(private _route: ActivatedRoute) { 
-    console.log(this._route.snapshot.paramMap.get('id')); 
    }
 
   ngOnInit() {

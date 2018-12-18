@@ -10,13 +10,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class MainComponent implements OnInit {
 
   posts:any;
-  constructor(public rest:RestService, private route: ActivatedRoute, private router: Router) { }
+  constructor(public rest:RestService) { }
 
   ngOnInit() {
-    this.getProducts();
+    this.getPosts();
   }
   
-  getProducts() {
+  getPosts() {
     this.rest.getPosts().subscribe((data: {}) => {
       console.log(data);
       this.posts = data;

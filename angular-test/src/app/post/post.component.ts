@@ -11,6 +11,7 @@ export class PostComponent implements OnInit {
   @Input() public photoUrl: string;
   @Input() public items: [];
   @Input() public id: string;
+  @Input() public title: string;
   constructor() { }
 
   ngOnInit() { 
